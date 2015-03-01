@@ -1,2 +1,2 @@
 # PowerShell
-collection of random PowerShell functions
+A collection of random PowerShell functions.
