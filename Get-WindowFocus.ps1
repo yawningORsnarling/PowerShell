@@ -1,8 +1,9 @@
 ﻿# -------------------------------------------------------------------------------------------------
 #
 # Name           : Get-WindowFocus
-# Description    : Function accepts a Windows process which is use to bring its corresponding
-#                  window into the foreground.
+# Author         : Shaun Phillips
+# Description    : Function accepts a Windows process, process ID, or the window title which is used
+#                  to bring its corresponding window into the foreground.
 # Last Modified  : 03-01-2015
 # Comments       : 
 #
@@ -33,3 +34,10 @@ function Get-WindowFocus {
   [Microsoft.VisualBasic.Interaction]::AppActivate($Handle)  
   
   }
+
+
+
+
+
+# -------------------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------------------
