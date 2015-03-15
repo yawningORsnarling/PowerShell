@@ -47,8 +47,7 @@ function CleanUp-Variables {
   
   (Get-Variable).Name | ? { $VariableBaseline -notcontains $_ } |
                         % { Remove-Variable -Name $_ -Force -Scope Global -ErrorAction SilentlyContinue
-                            if ((Get-Variable).Name -notcontains $_) { Write-Host "Removed: `$$_" -ForegroundColor DarkYellow }
-                          }
+                            if ((Get-Variable).Name -notcontains $_) { Write-Host "Removed: `$$_" -ForegroundColor DarkYellow } }
   
   }
 

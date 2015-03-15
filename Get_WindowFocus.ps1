@@ -29,9 +29,10 @@ function Get-WindowFocus {
   Add-Type -Assembly "Microsoft.VisualBasic"
   [void] [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.VisualBasic")
 
-  if ($ProcessName) { $Handle = (Get-Process $ProcessName -ErrorAction SilentlyContinue).Id }
-    elseif ($WindowTitle) { $Handle = $WindowTitle }
-
+  if ($ProcessName) { $Handle = (Get-Process -Name $ProcessName -ErrorAction SilentlyContinue).Id }
+    elseif ($ProcessID) { [int]$Handle = $ProcessID }
+      elseif ($WindowTitle) { $Handle = $WindowTitle }
+  
   [Microsoft.VisualBasic.Interaction]::AppActivate($Handle)  
   
   }
